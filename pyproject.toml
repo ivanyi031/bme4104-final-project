@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "mechatronics4"
+version = "0.1.0"
+description = "Package for Mechatronics4 Final Project"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+opencv-python = "^4.6.0.66"
+pyfirmata = "^1.1.0"
+matplotlib = "^3.6.2"
+imutils = "^0.5.4"
+black = "^22.10.0"
+isort = "^5.10.1"
+pycln = "^2.1.2"
+pre-commit = "^2.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ["py38"]
+
+[tool.isort]
+float_to_top = true
+profile = "black"
+py_version = 38
+skip = [".gitignore"]
+treat_comments_as_code = ["# %%"]
+
+[tool.pycln]
+all = true
+silence = true
